@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f4f4f4;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        header h1 {
+            margin: 20px 0 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        section {
+            padding: 50px 0;
+        }
+        .about, .portfolio, .contact {
+            background-color: #f9f9f9;
+        }
+        .about h2, .portfolio h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .about p, .portfolio p, .contact p {
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .portfolio .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project {
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+        }
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project p {
+            padding: 10px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        @media (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>Smita Prajapati</h1>
+        <p>Graduate Analyst at Deutsche Bank</p>
+    </header>
+    <section class="about container">
+        <h2>About Me</h2>
+        <p>Provide some information about yourself, your background and skills..... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente et eos nesciunt magni, delectus laborum voluptates nam itaque voluptas aperiam! Aut similique sint incidunt hic quo? Placeat possimus distinctio impedit?</p>
+    </section>
+    <section class="portfolio container">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, deleniti maxime possimus ratione vero neque quam commodi nostrum, consequuntur molestias aliquid nisi dolores aliquam repellat excepturi eligendi nihil, dolorem minus.</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sunt cum harum dolore pariatur asperiores? Quia eligendi harum ex doloribus. Esse est rem maxime amet a suscipit labore mollitia. Minus.</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima quasi sunt dolor, hic neque, repellendus perspiciatis, perferendis reprehenderit doloribus id! Iusto odio omnis minus hic quibusdam enim necessitatibus dolore.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact container">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </div>
+    </section>
+</body>
+</html>
+
