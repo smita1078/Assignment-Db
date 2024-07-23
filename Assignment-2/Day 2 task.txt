@@ -1,0 +1,99 @@
+
+1.
+function cubeArray(arr){
+return arr.map(num=>num**3);
+}
+
+2.
+function sumArray(arr){
+return arr.reduce((acc,num)=>acc+num,0);
+}
+
+3.
+function isPrime(num){
+if(num<=1) return false;
+if(num===2) return true;
+for(let i=2;i<Math.sqrt(num);i++){
+if(num%i===0) return false;
+}
+return true;
+}
+
+function primes(arr){
+return arr.filter(isPrime);
+}
+
+4.
+function avgofSqOdds(arr){
+const squaredOdds =arr.filter(num=>num%2!==0).map(num=>num**2);
+const sum=squaredOdds.reduce((acc,num)=>acc+num,0);
+return squaredOdds.length>0 ? sum/squaredOdds.length:0;
+}
+
+5.
+functionlongestString(arr){
+return arr.reduce ((longest,current)=>current.length>longest.length?current:longest,"");
+}
+
+6.
+function capitalize(sentence){
+return sentence.split(' ').map(word=>word.charAt(0)).toUpperCase()+word.slice(1)).join(' ');
+}
+
+7.
+function allPassingStudents(students){
+return students.filter(student=>student.score>=60);
+}
+
+8.
+function counter(){
+let count=0;
+return function(){
+count++;
+return count;
+};
+}
+
+9.
+function calculator(a,b,operation){
+return new Promise((resolve,reject)=>{
+if(typeof a!='number' || typeof b!=='number'){
+return reject("Both arguments must be numbers.");
+}
+switch(operation){
+case 'addition':
+resolve(a+b);
+break;
+
+case 'subtraction':
+resolve(a-b);
+break;
+
+case 'multiplication':
+resolve(a*b);
+break;
+
+case 'division':
+if(b===0){
+reject("Division by zero");
+}else{
+resolve(a/b);
+}
+break;
+default:
+reject("Invalid operation");
+}
+});
+}
+
+
+10.
+function totalscore(objects){
+let totalscore=0;
+objects.forEach(obj=>{
+if(obj.hasownProperty('score')){
+totalscore+=obj.score;
+}
+});
+return totalscore;
+}
